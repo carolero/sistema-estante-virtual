@@ -50,7 +50,7 @@ public class LivroController {
 	@GetMapping("/lidos")
 	public ModelAndView verListaDeLivrosLidos() {
 		ModelAndView modelAndView = new ModelAndView("lidos.html");
-		modelAndView.addObject("lidos", livroService.mostrarLivrosLidos());
+		modelAndView.addObject("lidos", livroService.mostrarLivros());
 		return modelAndView;
 	}
 	@GetMapping("/lidos/{id}")
@@ -63,7 +63,7 @@ public class LivroController {
 	@GetMapping("/emprestados")
 	public ModelAndView verListaDeLivrosEmprestados() {
 		ModelAndView modelAndView = new ModelAndView("emprestados.html");
-		modelAndView.addObject("emprestados", livroService.mostrarLivrosEmprestados());
+		modelAndView.addObject("emprestados", livroService.mostrarLivros());
 		return modelAndView;
 	}
 	@GetMapping("/emprestados/{id}")

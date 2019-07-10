@@ -13,9 +13,6 @@ public class LivroService {
 	
 	private List<LivroModel> livros = new ArrayList<LivroModel>();
 	
-	private List<LivroModel> lidos = new ArrayList<LivroModel>();
-	private List<LivroModel> emprestados = new ArrayList<LivroModel>();
-	
 	public Collection<LivroModel> mostrarLivros() {
 		return this.livros;
 	}
@@ -34,21 +31,13 @@ public class LivroService {
 		}
 	}
 	
-	public Collection<LivroModel> mostrarLivrosLidos() {
-		return this.lidos;
-	}
-	
 	public Collection<LivroModel> lerLivro(int id) {
 		for (LivroModel livro : livros) {
 			if(livro.getId() == id) {
 				livro.setLocalDeVisualizacao("lidos");
 			}
 		}
-		return lidos;
-	}
-	
-	public Collection<LivroModel> mostrarLivrosEmprestados() {
-		return this.emprestados;
+		return livros;
 	}
 	
 	public Collection<LivroModel> emprestarLivro(int id) {
@@ -57,7 +46,7 @@ public class LivroService {
 				livro.setLocalDeVisualizacao("emprestados");
 			}
 		}
-		return emprestados;
+		return livros;
 	}
 	
 	public void devolverLivro(int id) {
