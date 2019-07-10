@@ -2,7 +2,8 @@ package com.br.zup.estante.models;
 
 public class LivroModel {
 	
-	private int id = 1; 
+	private int id = 0; 
+	private String mostrar;
 	private String tituloDoLivro;
 	private String autor;
 	private String genero;
@@ -18,11 +19,17 @@ public class LivroModel {
 		this.genero = genero;
 		this.paginas = paginas;
 	}
+	public String getMostrar() {
+		return mostrar;
+	}
+	public void setMostrar(String mostrar) {
+		this.mostrar = mostrar;
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
-		this.id = id+1;
+		this.id = id;
 	}
 	public String getTituloDoLivro() {
 		return tituloDoLivro;

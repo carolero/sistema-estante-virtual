@@ -12,17 +12,24 @@ import com.br.zup.estante.models.LivroModel;
 @Service
 public class LivroService {
 	
-	private List<LivroModel> livros = new ArrayList<LivroModel>(Arrays.asList(
-			new LivroModel("Mitologia Nórdica", "Neil Gaiman", 
-					"Literatura fantástica", 288)));
+	private List<LivroModel> livros = new ArrayList<LivroModel>();
 	
 	public Collection<LivroModel> mostrarLivros() {
 		return this.livros;
 	}
 	
 	public void cadastrarLivro(LivroModel livroModel) {
-		livroModel.setId(livros.size());
+		livroModel.setId(livros.size() + 1);
+		livroModel.setMostrar("S");
 		livros.add(livroModel);
+	}
+	
+	public void apagarLivro(int id) {
+		for (LivroModel livroModel : livros) {
+			if(livroModel.getId() == id) {
+				livroModel.setMostrar("");
+			}
+		}
 	}
 
 }
