@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastrar livro</title>
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}">
+</head>
+<body>
+    
+    <div>
+        <form method="POST">
+            Título: <input type="text" name="tituloDoLivro">
+            Autor: <input type="text" name="autor">
+            Gênero: <input type="text" name="genero">
+            Páginas: <input type="number" step="0.01" name="paginas">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <a href="/">Voltar ao menu</a>
+
+</body>
+</html>
