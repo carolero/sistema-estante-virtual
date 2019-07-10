@@ -3,7 +3,7 @@ package com.br.zup.estante.models;
 public class LivroModel {
 	
 	private int id = 0; 
-	private String mostrar;
+	private String localDeVisualizacao;
 	private String tituloDoLivro;
 	private String autor;
 	private String genero;
@@ -19,11 +19,11 @@ public class LivroModel {
 		this.genero = genero;
 		this.paginas = paginas;
 	}
-	public String getMostrar() {
-		return mostrar;
+	public String getLocalDeVisualizacao() {
+		return localDeVisualizacao;
 	}
-	public void setMostrar(String mostrar) {
-		this.mostrar = mostrar;
+	public void setLocalDeVisualizacao(String localDeVisualizacao) {
+		this.localDeVisualizacao = localDeVisualizacao;
 	}
 	public int getId() {
 		return id;

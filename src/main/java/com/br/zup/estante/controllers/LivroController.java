@@ -46,5 +46,44 @@ public class LivroController {
 		livroService.apagarLivro(id);
 		return "redirect:/";
 	}
+	
+	@GetMapping("/lidos")
+	public ModelAndView verListaDeLivrosLidos() {
+		ModelAndView modelAndView = new ModelAndView("lidos.html");
+		modelAndView.addObject("lidos", livroService.mostrarLivrosLidos());
+		return modelAndView;
+	}
+	@GetMapping("/lidos/{id}")
+	public ModelAndView lerLivro(@PathVariable int id) {
+		ModelAndView modelAndView = new ModelAndView("mensagem-lido.html");
+		modelAndView.addObject("lidos", livroService.lerLivro(id));
+		return modelAndView;
+	}
+	
+	@GetMapping("/emprestados")
+	public ModelAndView verListaDeLivrosEmprestados() {
+		ModelAndView modelAndView = new ModelAndView("emprestados.html");
+		modelAndView.addObject("emprestados", livroService.mostrarLivrosEmprestados());
+		return modelAndView;
+	}
+	@GetMapping("/emprestados/{id}")
+	public ModelAndView emprestarLivro(@PathVariable int id) {
+		ModelAndView modelAndView = new ModelAndView("mensagem-emprestado.html");
+		modelAndView.addObject("lidos", livroService.emprestarLivro(id));
+		return modelAndView;
+	}
+	
+	@GetMapping("/devolvido/{id}")
+	public ModelAndView devolverLivro() {
+		ModelAndView modelAndView = new ModelAndView("mensagem-devolvido.html");
+		return modelAndView;
+	}
+	
+	@PostMapping("/devolvido/{id}")
+	public String devolverLivroParaEstante(@PathVariable int id) {
+		livroService.devolverLivro(id);
+		return "redirect:/";
+	}
+	
 
 }
