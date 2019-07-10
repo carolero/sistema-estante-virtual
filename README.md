@@ -5,8 +5,8 @@ Sistema de estante, onde você pode cadastrar seus livros e tornar sua vida mais
 ### O que você pode fazer com este sistema
 
 * Adicionar seus livros a uma estante;
-* Marcá-los como "lido" caso termine de lê-lo;
-* Movê-lo para a lista de "emprestados" quando emprestá-lo para alguém;
+* Marcá-los como "lido" caso termine de lê-los;
+* Movê-los para a lista de "emprestados" quando emprestá-los para alguém;
 * Apagar qualquer livro existente na lista.
 
 ### Este pequeno sistema foi feito com:
